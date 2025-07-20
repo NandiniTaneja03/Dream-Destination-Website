@@ -14,8 +14,8 @@ const Footer = () => {
             <h3>Dream Destination</h3>
             <p>15 years of excellence in travel solutions. Trusted by thousands. Listed on JustDial. Follow us on Instagram.</p>
             <div className="social-links">
-  <a href="#"><FaFacebookF /></a>
-  <a href="#"><FaTwitter /></a>
+  {/* <a href="#"><FaFacebookF /></a> */}
+  {/* <a href="#"><FaTwitter /></a> */}
   <a href="https://www.instagram.com/dreamdestinationpanipat?igsh=MWQxMzVnYjlqMWh6YQ%3D%3D"><FaInstagram /></a>
   <a href="https://www.justdial.com/Panipat/Dream-Destination-Behind-Old-Bus-Stand-Sukhdev-Nagar/9999PX180-X180-250328165205-P4F4_BZDET?auto=1&trkid=9990061654-fcomp&term=Dream%20Destination%20Sukhdev%20Nagar" target="_blank" rel="noreferrer"><FaSearchLocation /></a>
 </div>
