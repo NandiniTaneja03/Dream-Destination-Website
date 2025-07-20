@@ -39,12 +39,19 @@ const Admin = () => {
   };
 
   // Filter contacts by selected date range
-  const filteredContacts = contacts.filter(contact => {
-    const date = new Date(contact.createdAt).toISOString().split('T')[0]; // "YYYY-MM-DD"
-    const afterStart = !startDate || date >= startDate;
-    const beforeEnd = !endDate || date <= endDate;
-    return afterStart && beforeEnd;
-  });
+  const filteredContacts = contacts.filter((contact) => {
+  const created = new Date(contact.createdAt).getTime();
+
+  if (startDate && endDate) {
+    const start = new Date(startDate).getTime();
+    const end = new Date(new Date(endDate).setHours(23, 59, 59, 999)).getTime();
+    return created >= start && created <= end;
+  }
+
+  return true; // Show all if no filter is applied
+});
+
+
 
   return (
     <div className="admin-dashboard" style={{ padding: "2rem", backgroundColor: "#f9f9f9" }}>
