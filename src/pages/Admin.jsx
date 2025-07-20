@@ -11,7 +11,7 @@ const Admin = () => {
   // Fetch all contacts
   const fetchContacts = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/contacts');
+      const res = await axios.get('https://dream-destination-website-1.onrender.com/api/contacts');
       setContacts(res.data);
     } catch (err) {
       console.error("Error fetching contacts:", err);
@@ -30,7 +30,7 @@ const Admin = () => {
     if (!confirm) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/contacts/${id}`);
+await axios.delete(`https://dream-destination-website-1.onrender.com/api/contacts/${id}`);
       setContacts(prev => prev.filter(contact => contact._id !== id));
     } catch (err) {
       console.error("Error deleting contact:", err);

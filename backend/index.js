@@ -1,9 +1,7 @@
 require("dotenv").config(); // load .env variables
 const express = require("express");
 const cors = require("cors");
-const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-
 
 // ✅ Connect to MongoDB Atlas using MONGO_URI from .env
 mongoose
@@ -13,7 +11,6 @@ mongoose
   })
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.error("❌ MongoDB connection error:", err));
-
 
 // 🧠 Mongoose Schema and Model
 const contactSchema = new mongoose.Schema(
@@ -32,7 +29,12 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json()); // Replaced body-parser
+
+// 🔄 Default test route
+app.get("/", (req, res) => {
+  res.send("✅ Dream Destination backend is running!");
+});
 
 // 📥 POST: Handle contact form submission
 app.post("/api/contact", async (req, res) => {
@@ -74,5 +76,5 @@ app.delete("/api/contacts/:id", async (req, res) => {
 
 // 🧨 Start the server
 app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
+  console.log(`🚀 Server running at http://localhost:${PORT} or on Render`);
 });

@@ -22,7 +22,8 @@ const Contact = () => {
     setError(false);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/contact', formData);
+      const res = await axios.post('https://dream-destination-website-1.onrender.com/api/contact', formData);
+
       setFeedback(res.data.message);
       setFormData({ name: '', email: '', message: '' });
     } catch (err) {
