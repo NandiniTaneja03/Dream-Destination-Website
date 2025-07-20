@@ -315,7 +315,7 @@ footer {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero.avif');
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url('./assets/hero.avif');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -344,7 +344,7 @@ footer {
 
 /* Page Title */
 .page-title {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('maybe.avif');
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./assets/maybe.avif');
   background-size: cover;
   background-position: center;
   padding: 120px 0 80px;
