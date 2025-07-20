@@ -1,7 +1,7 @@
 import React from 'react';
 // import '../style.css';
 import { Link } from 'react-router-dom';
-import { FaFacebookF, FaTwitter, FaInstagram, FaSearchLocation } from 'react-icons/fa';
+import { FaInstagram, FaSearchLocation } from 'react-icons/fa';
 
 
 
